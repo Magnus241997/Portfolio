@@ -2,71 +2,43 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f2f2f2;
+  color: #222;
 }
 
-/* HERO */
+/* =====================
+   HERO (MODERN DARK)
+===================== */
 .hero {
-  background: #111;
+  background: linear-gradient(135deg, #1f2933, #111827);
   color: white;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-/* SECTIONS */
-section {
-  background: white;
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 40px 20px;
-  border-radius: 10px;
-}
-
-/* GRID LAYOUTS */
-.services,
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* CARDS */
-.card {
-  background: #fafafa;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* PROJECT IMAGES */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
+.hero h1 {
+  font-size: 2.6rem;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 /* HERO HEADLINE */
 .headline {
-  font-weight: 600;      /* semi-bold */
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   margin-top: 10px;
   letter-spacing: 0.5px;
-  opacity: 0.95;
+  opacity: 0.85;
 }
 
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .headline {
-    font-size: 1.05rem;
-  }
+/* =====================
+   SECTIONS
+===================== */
+section {
+  background: white;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 14px;
 }
 
 section h2 {
@@ -74,10 +46,86 @@ section h2 {
   margin-bottom: 30px;
 }
 
+/* ABOUT */
 .about p {
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
 }
 
+/* =====================
+   GRID LAYOUTS
+===================== */
+.services,
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
 
+/* =====================
+   CARDS
+===================== */
+.card {
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
 
+.card h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+/* =====================
+   PROJECT IMAGES
+===================== */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   SKILLS (if added)
+===================== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skills-list span {
+  background: #e5f1ff;
+  color: #1e40af;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .headline {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 30px 20px;
+  }
+}
