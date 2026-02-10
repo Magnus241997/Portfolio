@@ -14,11 +14,11 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 65vh;
+  min-height: 80vh;
   background:
     linear-gradient(
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.65)
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
     ),
     url("hero-bg.jpg") center / cover no-repeat;
 
@@ -42,7 +42,7 @@ body {
 /* HERO HEADLINE */
 .headline {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   opacity: 0.95;
 }
@@ -155,3 +155,13 @@ section h2 {
     margin: 35px 15px;
   }
 }
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  margin-top: auto;
+}
+
+
