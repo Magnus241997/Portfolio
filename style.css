@@ -14,17 +14,27 @@ body {
 
 /* HERO */
 .hero {
+  min-height: 100vh;
+  width: 100%;
+
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("hero-bg.jpg") center top / cover no-repeat;
+    url("hero-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 
   color: white;
-  padding: 140px 20px 120px;
   text-align: center;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  padding: 40px 20px;
 }
 
 .hero h1 {
@@ -154,3 +164,4 @@ section h2 {
     margin: 35px 15px;
   }
 }
+
