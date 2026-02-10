@@ -14,21 +14,16 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 80vh;
   background:
-    linear-gradient(
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.45)
-    ),
-    url("hero-bg.jpg") center / cover no-repeat;
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("hero-bg.jpg") center top / cover no-repeat;
 
   color: white;
-  padding: 100px 20px;
+  padding: 140px 20px 120px;
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -110,6 +105,9 @@ section h2 {
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
@@ -119,6 +117,7 @@ section h2 {
 .card p {
   font-size: 0.95rem;
   color: #444;
+  margin-top: auto;
 }
 
 .card:hover {
@@ -139,7 +138,7 @@ section h2 {
 /* RESPONSIVE */
 @media (max-width: 600px) {
   .hero {
-    padding: 80px 15px;
+    padding: 110px 15px 90px;
   }
 
   .hero h1 {
@@ -155,13 +154,3 @@ section h2 {
     margin: 35px 15px;
   }
 }
-.card {
-  display: flex;
-  flex-direction: column;
-}
-
-.card p {
-  margin-top: auto;
-}
-
-
