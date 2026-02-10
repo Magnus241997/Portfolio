@@ -1,11 +1,12 @@
 /* RESET / GLOBAL */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
   background: #f2f2f2;
   color: #222;
   line-height: 1.6;
@@ -19,7 +20,7 @@ body {
       rgba(0,0,0,0.65),
       rgba(0,0,0,0.65)
     ),
-    url("hero-bg.png") center / cover no-repeat;
+    url("hero-bg.jpg") center / cover no-repeat;
 
   color: white;
   padding: 100px 20px;
@@ -112,7 +113,6 @@ section h2 {
 }
 
 .card h3 {
-  margin-top: 0;
   margin-bottom: 12px;
 }
 
@@ -133,6 +133,7 @@ section h2 {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 14px;
+  display: block;
 }
 
 /* RESPONSIVE */
