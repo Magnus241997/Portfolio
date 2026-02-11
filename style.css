@@ -149,7 +149,7 @@ body.dark .card {
 
 /* SCROLL REVEAL FOR SECTIONS */
 section {
-  background: #eef1f5;
+  background: #edf0f4;
   max-width: 1000px;
   margin: 50px auto;
   padding: 50px 30px;
@@ -274,3 +274,4 @@ section h2 {
     margin: 35px 15px;
   }
 }
+
