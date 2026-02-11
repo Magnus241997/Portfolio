@@ -261,6 +261,13 @@ section h2 {
     padding: 35px 18px;
     margin: 35px 15px;
   }
+  .project-list {
+  padding-left: 22px;   /* indent */
+  margin-top: 6px;      /* small spacing above bullets */
+  line-height: 1.55;    /* cleaner spacing between bullets */
+}
+
+
 
 
 
