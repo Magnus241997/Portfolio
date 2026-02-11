@@ -58,23 +58,22 @@ body {
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-/* LINKEDIN ICON BUTTON */
+/* LINKEDIN ICON BUTTON (SVG VERSION) */
 .linkedin-icon {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeUp 1s ease-out forwards 0.9s; /* delayed after headline */
+  animation: fadeUp 1s ease-out forwards 0.9s;
 }
 
-.linkedin-icon img {
+.linkedin-icon svg {
+  margin-top: 22px;
   width: 46px;
   height: 46px;
-  margin-top: 22px;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
-/* Hover animation */
-.linkedin-icon img:hover {
+.linkedin-icon svg:hover {
   transform: scale(1.18) translateY(-3px);
   filter: drop-shadow(0 0 10px rgba(0,150,255,0.6));
 }
