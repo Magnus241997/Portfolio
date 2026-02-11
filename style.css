@@ -276,3 +276,19 @@ section h2 {
     line-height: 1.55;
   }
 }
+.projects {
+  align-items: start;
+}
+
+.projects .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projects .card p,
+.projects .card ul {
+  flex-grow: 1;
+}
+
+
