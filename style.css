@@ -48,7 +48,6 @@ body {
   font-weight: 500;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
-  opacity: 0.95;
 
   /* Animation */
   opacity: 0;
@@ -57,6 +56,20 @@ body {
 
   /* Readability */
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* LINKEDIN ICON BUTTON */
+.linkedin-icon img {
+  width: 42px;
+  height: 42px;
+  margin-top: 22px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.linkedin-icon img:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
 }
 
 /* Fade-up animation keyframes */
