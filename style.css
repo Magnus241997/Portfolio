@@ -91,14 +91,9 @@ body.dark .card {
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-/* REMOVE UNDERLINE COMPLETELY */
-.hero h1::after {
-  content: none;
-  display: none;
-}
+/* UNDERLINE CODE REMOVED COMPLETELY */
+/* (No ::after, no underline animation, no keyframes) */
 
-/* REMOVE UNDERLINE ANIMATION */
-@keyframes underline {}
 
 .headline {
   font-weight: 500;
@@ -266,6 +261,7 @@ section h2 {
     padding: 35px 18px;
     margin: 35px 15px;
   }
+
 
 
 
