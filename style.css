@@ -275,4 +275,10 @@ section h2 {
   }
 }
 
+.hero h1::after {
+  display: none !important;
+}
+
+
+
 
