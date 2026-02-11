@@ -93,15 +93,12 @@ body.dark .card {
 
 /* REMOVE UNDERLINE COMPLETELY */
 .hero h1::after {
-  content: none !important;
-  display: none !important;
+  content: none;
+  display: none;
 }
 
 /* REMOVE UNDERLINE ANIMATION */
-@keyframes underline {
-  /* empty on purpose — disabled */
-}
-
+@keyframes underline {}
 
 .headline {
   font-weight: 500;
@@ -269,6 +266,7 @@ section h2 {
     padding: 35px 18px;
     margin: 35px 15px;
   }
+
 
 
 
