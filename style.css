@@ -144,7 +144,7 @@ section h2 {
 
 /* CARDS */
 .card {
-  background: #fafafa;
+  background: #eef1f5;
   padding: 25px;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
@@ -197,5 +197,6 @@ section h2 {
     margin: 35px 15px;
   }
 }
+
 
 
