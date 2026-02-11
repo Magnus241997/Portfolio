@@ -76,7 +76,7 @@ body.dark .card {
   to { transform: translateY(-25px) rotate(35deg); }
 }
 
-/* NAME + UNDERLINE ANIMATION */
+/* NAME (NO UNDERLINE ANYMORE) */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 12px;
@@ -91,21 +91,17 @@ body.dark .card {
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
+/* REMOVE UNDERLINE COMPLETELY */
 .hero h1::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  background: #00aaff;
-  transform: translateX(-50%);
-  animation: underline 1s ease-out forwards 1s;
+  content: none !important;
+  display: none !important;
 }
 
+/* REMOVE UNDERLINE ANIMATION */
 @keyframes underline {
-  to { width: 120px; }
+  /* empty on purpose — disabled */
 }
+
 
 .headline {
   font-weight: 500;
@@ -273,6 +269,7 @@ section h2 {
     padding: 35px 18px;
     margin: 35px 15px;
   }
+
 
 
 
