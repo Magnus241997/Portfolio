@@ -16,7 +16,6 @@
       Mechanical Engineer | Automotive CAD & CAE Design Support
     </p>
 
-    <!-- LINKEDIN ICON BUTTON -->
     <a href="https://www.linkedin.com/in/EngrKennethJamesCorreaDuapa"
        target="_blank"
        class="linkedin-icon">
@@ -40,82 +39,62 @@
     <!-- ABOUT -->
     <section class="about">
       <h2>About Me</h2>
-
       <p>
         I’m a mechanical engineer with <strong>5 years of hands-on experience</strong>
-        in automotive design and technical support. My primary design tool is
-        <strong>CATIA</strong>, where I create accurate and manufacturable
-        <strong>3D models and 2D drawings</strong>.
-      </p>
-
-      <p>
-        I also use <strong>BETA CAE (ANSA)</strong> for geometry cleanup,
-        midsurface extraction, meshing, and quality checks to support CAE requirements.
-        In addition, I use Solidworks for simple 3D modeling and basic analysist to assist in
-        design validation.
-      </p>
-
-      <p>
-        I focus on clean design data, manufacturability, and practical engineering solutions that
-        help projects move efficiently from concept to production.
+        in automotive design and technical support.
       </p>
     </section>
 
     <!-- SKILLS -->
     <section class="skills">
       <h2>Skills</h2>
-
       <div class="skills-list">
         <span>CATIA</span>
         <span>BETA CAE (ANSA)</span>
         <span>SolidWorks</span>
         <span>3D CAD Modeling</span>
         <span>2D Drafting</span>
-        <span>Basic GD&amp;T</span>
-        <span>Geometry Cleanup</span>
-        <span>Meshing Support</span>
-        <span>Automotive Design</span>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS WITH ARROWS -->
     <section class="projects-section">
       <h2>Projects</h2>
 
-      <div class="projects">
+      <div class="projects-wrapper">
 
-        <!-- PROJECT 1 -->
-        <div class="card">
-          <img src="project1.jpg" alt="Mechanical Part Design">
-          <h3>Gaming Mouse Concept Design (Aesthetic Study)</h3>
+        <!-- LEFT ARROW -->
+        <button class="arrow left" onclick="scrollProjects(-1)">
+          &#10094;
+        </button>
 
-          <p>
-            This project is a styling study created entirely from scratch using CATIA V5. 
-            The goal was to design a multi-part aesthetic model, organize the assembly structure, 
-            and generate clear visualization outputs such as isometric and exploded views.
-            <br><br>
-            This model is not intended for manufacturing. It serves as a demonstration of my skills in:
-          </p>
+        <!-- PROJECTS CONTAINER -->
+        <div class="projects" id="projectsContainer">
 
-          <ul class="project-list">
-            <li>3D part modeling</li>
-            <li>Assembly creation</li>
-            <li>Design visualization</li>
-            <li>Basic manufacturing reference annotation (die direction, parting line, slide direction)</li>
-          </ul>
+          <div class="card">
+            <img src="project1.jpg" alt="Gaming Mouse">
+            <h3>Gaming Mouse Concept Design</h3>
+            <p>CATIA V5 aesthetic multi-part modeling study.</p>
+          </div>
+
+          <div class="card">
+            <img src="project2.jpg" alt="Side Bracket">
+            <h3>Side Bracket Study</h3>
+            <p>3D modeling and 2D drafting practice project.</p>
+          </div>
+
+          <div class="card">
+            <img src="project3.jpg" alt="Surface Modeling">
+            <h3>Automotive Surface Study</h3>
+            <p>Boundary surface and guide curve modeling practice.</p>
+          </div>
+
         </div>
 
-        <!-- PROJECT 2 -->
-        <div class="card">
-          <img src="project2.jpg" alt="Assembly Design">
-          <h3>Side Bracket Study</h3>
-
-          <p>
-            Personal CAD study project of a side bracket developed in CATIA V5 to practice 
-            3D modeling and 2D drawing standards. This design is for learning and 
-            demonstration purposes only.
-          </p>
-        </div>
+        <!-- RIGHT ARROW -->
+        <button class="arrow right" onclick="scrollProjects(1)">
+          &#10095;
+        </button>
 
       </div>
     </section>
@@ -123,29 +102,38 @@
     <!-- SERVICES -->
     <section class="services-section">
       <h2>Services</h2>
-
       <div class="services">
-
         <div class="card">
           <h3>3D CAD Modeling</h3>
-          <p>Production-ready part and assembly modeling using CATIA and SolidWorks.</p>
+          <p>Production-ready modeling using CATIA and SolidWorks.</p>
         </div>
 
         <div class="card">
           <h3>2D Drafting</h3>
-          <p>Manufacturing drawings with proper dimensions and tolerances.</p>
+          <p>Manufacturing drawings with proper tolerances.</p>
         </div>
 
         <div class="card">
-          <h3>Design &amp; CAE Support</h3>
-          <p>Design revisions and meshing support for automotive components.</p>
+          <h3>Design & CAE Support</h3>
+          <p>Geometry cleanup and meshing support.</p>
         </div>
-
       </div>
     </section>
 
   </main>
 
+  <!-- SCROLL SCRIPT -->
+  <script>
+    function scrollProjects(direction) {
+      const container = document.getElementById("projectsContainer");
+      const scrollAmount = 350;
+
+      container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+
 </body>
 </html>
-
