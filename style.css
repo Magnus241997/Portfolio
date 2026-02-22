@@ -188,12 +188,44 @@ section h2 {
   background: #e2e2e2;
 }
 
-/* GRID LAYOUTS */
-.services,
-.projects {
+/* SERVICES */
+.services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+}
+
+/* PROJECTS — Horizontal Scroll */
+.projects {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.projects::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.projects .card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projects .card p,
+.projects .card ul {
+  flex-grow: 1;
 }
 
 /* CARDS */
@@ -272,19 +304,4 @@ section h2 {
     margin-top: 6px;
     line-height: 1.55;
   }
-}
-
-.projects {
-  align-items: start;
-}
-
-.projects .card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.projects .card p,
-.projects .card ul {
-  flex-grow: 1;
 }
