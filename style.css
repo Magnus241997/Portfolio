@@ -1,8 +1,14 @@
+/* ============================= */
 /* RESET / GLOBAL */
+/* ============================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* ===== GRAY DARK BACKGROUND ===== */
@@ -11,8 +17,8 @@ body {
   background: radial-gradient(circle at 20% 20%, #2a2f38, #1b1f27 60%, #12151b 100%);
   color: #e4e6eb;
   line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
+  padding-top: 90px; /* space for floating navbar */
 }
 
 /* OPTIONAL DARK MODE */
@@ -21,23 +27,81 @@ body.dark {
   color: #ffffff;
 }
 
+
+/* ============================= */
+/* FLOATING NAVBAR */
+/* ============================= */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 14px 38px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(50,55,65,0.85),
+    rgba(25,28,35,0.95)
+  );
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 20px rgba(140,150,170,0.18),
+    inset 0 0 15px rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: 0.25s;
+}
+
+.navbar a:hover {
+  color: #cfd3da;
+}
+
+
+/* ============================= */
 /* HERO */
+/* ============================= */
 .hero {
   position: relative;
   overflow: hidden;
+
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35)),
     url("hero-bg.jpg") center top / cover no-repeat;
+
   color: white;
   padding: 18vh 20px 16vh;
   text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1.2s ease-out forwards;
 }
+
 
 /* FLOATING SHAPES */
 .hero::before,
@@ -71,11 +135,13 @@ body.dark {
   }
 }
 
+
 /* HERO TEXT */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 12px;
   font-weight: 700;
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.3s;
@@ -84,10 +150,12 @@ body.dark {
 .headline {
   font-weight: 500;
   font-size: 1.3rem;
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.6s;
 }
+
 
 /* LINKEDIN ICON */
 .linkedin-icon {
@@ -108,7 +176,10 @@ body.dark {
   filter: drop-shadow(0 0 10px rgba(180,180,180,0.4));
 }
 
-/* ANIMATION */
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -116,12 +187,21 @@ body.dark {
   }
 }
 
-/* ===== GLASS STYLE SECTIONS ===== */
+
+/* ============================= */
+/* GLASS STYLE SECTIONS */
+/* ============================= */
 section {
-  background: linear-gradient(145deg, rgba(50,55,65,0.75), rgba(25,28,35,0.95));
+  background: linear-gradient(
+    145deg,
+    rgba(50,55,65,0.75),
+    rgba(25,28,35,0.95)
+  );
+
   max-width: 1000px;
   margin: 40px auto;
   padding: 50px 30px;
+
   border-radius: 18px;
 
   border: 1px solid rgba(255,255,255,0.06);
@@ -144,12 +224,14 @@ section {
   }
 }
 
+
 /* HEADINGS */
 section h2 {
   text-align: center;
   margin-bottom: 35px;
   font-size: 1.9rem;
 }
+
 
 /* ABOUT */
 .about p {
@@ -160,7 +242,10 @@ section h2 {
   margin-right: auto;
 }
 
+
+/* ============================= */
 /* SKILLS */
+/* ============================= */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -180,28 +265,41 @@ section h2 {
   background: rgba(200,200,200,0.18);
 }
 
+
+/* ============================= */
 /* SERVICES */
+/* ============================= */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
 
-/* PROJECTS SCROLL */
+
+/* ============================= */
+/* PROJECTS */
+/* ============================= */
 .projects {
   display: flex;
   gap: 25px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
 }
 
 .projects .card {
   flex: 0 0 280px;
 }
 
-/* ===== CARDS ===== */
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
 .card {
-  background: linear-gradient(145deg, rgba(55,60,70,0.85), rgba(30,34,42,0.95));
+  background: linear-gradient(
+    145deg,
+    rgba(55,60,70,0.85),
+    rgba(30,34,42,0.95)
+  );
+
   padding: 25px;
   border-radius: 16px;
 
@@ -230,6 +328,7 @@ section h2 {
   color: #cfd3da;
 }
 
+
 /* IMAGES */
 .card img {
   width: 100%;
@@ -239,14 +338,19 @@ section h2 {
   margin-bottom: 14px;
 }
 
-/* PROJECT LIST */
-.project-list {
-  padding-left: 22px;
-  margin-top: 6px;
-}
 
+/* ============================= */
 /* RESPONSIVE */
+/* ============================= */
 @media (max-width: 600px) {
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar ul {
+    gap: 18px;
+  }
 
   .hero {
     padding: 110px 15px 90px;
