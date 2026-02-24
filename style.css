@@ -5,19 +5,19 @@
   padding: 0;
 }
 
-/* ===== NEW DARK GRADIENT BACKGROUND ===== */
+/* ===== GRAY DARK BACKGROUND ===== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at 20% 20%, #0b1a3a, #050b1f 60%, #020617 100%);
-  color: #e6e6e6;
+  background: radial-gradient(circle at 20% 20%, #2a2f38, #1b1f27 60%, #12151b 100%);
+  color: #e4e6eb;
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
 }
 
-/* DARK MODE (stronger contrast) */
+/* OPTIONAL DARK MODE */
 body.dark {
-  background: radial-gradient(circle at 30% 30%, #0a1330, #020617 70%, #00040f 100%);
+  background: radial-gradient(circle at 30% 30%, #242830, #14171c 70%, #0b0d12 100%);
   color: #ffffff;
 }
 
@@ -39,14 +39,14 @@ body.dark {
   animation: fadeUp 1.2s ease-out forwards;
 }
 
-/* FLOATING GEOMETRIC SHAPES */
+/* FLOATING SHAPES */
 .hero::before,
 .hero::after {
   content: "";
   position: absolute;
   width: 180px;
   height: 180px;
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   animation: float 6s ease-in-out infinite alternate;
 }
@@ -54,41 +54,36 @@ body.dark {
 .hero::before {
   top: 20%;
   left: 10%;
-  transform: rotate(25deg);
 }
 
 .hero::after {
   bottom: 15%;
   right: 12%;
-  transform: rotate(-15deg);
   animation-delay: 1.5s;
 }
 
 @keyframes float {
   from {
-    transform: translateY(0) rotate(20deg);
+    transform: translateY(0) rotate(15deg);
   }
   to {
-    transform: translateY(-25px) rotate(35deg);
+    transform: translateY(-25px) rotate(30deg);
   }
 }
 
-/* NAME */
+/* HERO TEXT */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 12px;
-  letter-spacing: 1px;
   font-weight: 700;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.3s;
 }
 
-/* HEADLINE */
 .headline {
   font-weight: 500;
   font-size: 1.3rem;
-  letter-spacing: 0.5px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.6s;
@@ -105,15 +100,15 @@ body.dark {
   margin-top: 22px;
   width: 46px;
   height: 46px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: 0.3s;
 }
 
 .linkedin-icon svg:hover {
-  transform: scale(1.18) translateY(-3px);
-  filter: drop-shadow(0 0 10px rgba(0,150,255,0.6));
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(180,180,180,0.4));
 }
 
-/* Fade-up animation */
+/* ANIMATION */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -121,19 +116,19 @@ body.dark {
   }
 }
 
-/* ===== UPDATED SECTIONS (glass dark cards) ===== */
+/* ===== GLASS STYLE SECTIONS ===== */
 section {
-  background: linear-gradient(145deg, rgba(20,30,60,0.75), rgba(5,10,30,0.9));
+  background: linear-gradient(145deg, rgba(50,55,65,0.75), rgba(25,28,35,0.95));
   max-width: 1000px;
   margin: 40px auto;
   padding: 50px 30px;
   border-radius: 18px;
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
 
   box-shadow:
-    0 0 40px rgba(0,120,255,0.12),
-    inset 0 0 40px rgba(0,120,255,0.05);
+    0 0 20px rgba(140,150,170,0.12),
+    inset 0 0 20px rgba(255,255,255,0.03);
 
   backdrop-filter: blur(6px);
 
@@ -149,7 +144,7 @@ section {
   }
 }
 
-/* SECTION HEADINGS */
+/* HEADINGS */
 section h2 {
   text-align: center;
   margin-bottom: 35px;
@@ -182,7 +177,7 @@ section h2 {
 }
 
 .skills-list span:hover {
-  background: rgba(0,120,255,0.25);
+  background: rgba(200,200,200,0.18);
 }
 
 /* SERVICES */
@@ -192,7 +187,7 @@ section h2 {
   gap: 25px;
 }
 
-/* PROJECTS */
+/* PROJECTS SCROLL */
 .projects {
   display: flex;
   gap: 25px;
@@ -204,27 +199,26 @@ section h2 {
   flex: 0 0 280px;
 }
 
-/* ===== UPDATED CARD WITH GLOW ===== */
+/* ===== CARDS ===== */
 .card {
-  background: linear-gradient(145deg, rgba(20,30,60,0.85), rgba(5,10,30,0.95));
+  background: linear-gradient(145deg, rgba(55,60,70,0.85), rgba(30,34,42,0.95));
   padding: 25px;
   border-radius: 16px;
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
 
   box-shadow:
-    0 0 25px rgba(0,120,255,0.15),
-    inset 0 0 25px rgba(0,120,255,0.05);
+    0 0 15px rgba(150,160,180,0.12),
+    inset 0 0 15px rgba(255,255,255,0.03);
 
   transition: 0.3s;
-  position: relative;
 }
 
 .card:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 0 40px rgba(0,120,255,0.35),
-    inset 0 0 40px rgba(0,120,255,0.1);
+    0 0 25px rgba(170,180,200,0.25),
+    inset 0 0 25px rgba(255,255,255,0.05);
 }
 
 .card h3 {
@@ -233,10 +227,10 @@ section h2 {
 
 .card p {
   font-size: 0.95rem;
-  color: #cfd8ff;
+  color: #cfd3da;
 }
 
-/* PROJECT IMAGES */
+/* IMAGES */
 .card img {
   width: 100%;
   height: 190px;
@@ -245,8 +239,15 @@ section h2 {
   margin-bottom: 14px;
 }
 
+/* PROJECT LIST */
+.project-list {
+  padding-left: 22px;
+  margin-top: 6px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
+
   .hero {
     padding: 110px 15px 90px;
   }
@@ -263,4 +264,5 @@ section h2 {
     padding: 35px 18px;
     margin: 25px 15px;
   }
+
 }
