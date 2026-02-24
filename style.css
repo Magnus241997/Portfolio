@@ -75,6 +75,16 @@ body.dark {
 
 .navbar a:hover {
   color: #cfd3da;
+
+  /* NAVBAR HIDE / SHOW */
+.navbar {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.navbar.hide {
+  transform: translate(-50%, -120%);
+  opacity: 0;
+}
 }
 
 
@@ -370,3 +380,4 @@ section h2 {
   }
 
 }
+
