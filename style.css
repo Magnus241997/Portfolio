@@ -18,10 +18,9 @@ body {
   color: #e4e6eb;
   line-height: 1.6;
   min-height: 100vh;
-  padding-top: 90px; /* space for floating navbar */
+  padding-top: 90px;
 }
 
-/* OPTIONAL DARK MODE */
 body.dark {
   background: radial-gradient(circle at 30% 30%, #242830, #14171c 70%, #0b0d12 100%);
   color: #ffffff;
@@ -32,6 +31,7 @@ body.dark {
 /* FLOATING NAVBAR */
 /* ============================= */
 .navbar {
+
   position: fixed;
   top: 20px;
   left: 50%;
@@ -56,7 +56,21 @@ body.dark {
   backdrop-filter: blur(8px);
 
   z-index: 1000;
+
+  /* needed for auto hide */
+  transition: transform 0.35s ease, opacity 0.35s ease;
+
 }
+
+
+/* AUTO HIDE CLASS */
+.navbar.hide {
+
+  transform: translate(-50%, -120%);
+  opacity: 0;
+
+}
+
 
 .navbar ul {
   list-style: none;
@@ -75,16 +89,6 @@ body.dark {
 
 .navbar a:hover {
   color: #cfd3da;
-
-  /* NAVBAR HIDE / SHOW */
-.navbar {
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-.navbar.hide {
-  transform: translate(-50%, -120%);
-  opacity: 0;
-}
 }
 
 
@@ -92,6 +96,7 @@ body.dark {
 /* HERO */
 /* ============================= */
 .hero {
+
   position: relative;
   overflow: hidden;
 
@@ -116,6 +121,7 @@ body.dark {
 /* FLOATING SHAPES */
 .hero::before,
 .hero::after {
+
   content: "";
   position: absolute;
   width: 180px;
@@ -123,6 +129,7 @@ body.dark {
   border: 2px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   animation: float 6s ease-in-out infinite alternate;
+
 }
 
 .hero::before {
@@ -137,17 +144,21 @@ body.dark {
 }
 
 @keyframes float {
+
   from {
     transform: translateY(0) rotate(15deg);
   }
+
   to {
     transform: translateY(-25px) rotate(30deg);
   }
+
 }
 
 
 /* HERO TEXT */
 .hero h1 {
+
   font-size: 3rem;
   margin-bottom: 12px;
   font-weight: 700;
@@ -155,35 +166,44 @@ body.dark {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.3s;
+
 }
 
 .headline {
+
   font-weight: 500;
   font-size: 1.3rem;
 
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.6s;
+
 }
 
 
 /* LINKEDIN ICON */
 .linkedin-icon {
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.9s;
+
 }
 
 .linkedin-icon svg {
+
   margin-top: 22px;
   width: 46px;
   height: 46px;
   transition: 0.3s;
+
 }
 
 .linkedin-icon svg:hover {
+
   transform: scale(1.15);
   filter: drop-shadow(0 0 10px rgba(180,180,180,0.4));
+
 }
 
 
@@ -191,17 +211,20 @@ body.dark {
 /* ANIMATIONS */
 /* ============================= */
 @keyframes fadeUp {
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 
 /* ============================= */
-/* GLASS STYLE SECTIONS */
+/* GLASS SECTIONS */
 /* ============================= */
 section {
+
   background: linear-gradient(
     145deg,
     rgba(50,55,65,0.75),
@@ -225,85 +248,84 @@ section {
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1s ease-out forwards;
+
 }
 
 @keyframes reveal {
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 
-/* HEADINGS */
 section h2 {
+
   text-align: center;
   margin-bottom: 35px;
   font-size: 1.9rem;
+
 }
 
 
-/* ABOUT */
-.about p {
-  line-height: 1.7;
-  margin-bottom: 18px;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-/* ============================= */
 /* SKILLS */
-/* ============================= */
 .skills-list {
+
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+
 }
 
 .skills-list span {
+
   background: rgba(255,255,255,0.08);
   padding: 9px 16px;
   border-radius: 999px;
   font-size: 0.9rem;
   transition: 0.3s;
+
 }
 
 .skills-list span:hover {
+
   background: rgba(200,200,200,0.18);
+
 }
 
 
-/* ============================= */
 /* SERVICES */
-/* ============================= */
 .services {
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+
 }
 
 
-/* ============================= */
 /* PROJECTS */
-/* ============================= */
 .projects {
+
   display: flex;
   gap: 25px;
   overflow-x: auto;
+
 }
 
 .projects .card {
+
   flex: 0 0 280px;
+
 }
 
 
-/* ============================= */
 /* CARDS */
-/* ============================= */
 .card {
+
   background: linear-gradient(
     145deg,
     rgba(55,60,70,0.85),
@@ -320,38 +342,27 @@ section h2 {
     inset 0 0 15px rgba(255,255,255,0.03);
 
   transition: 0.3s;
+
 }
 
 .card:hover {
+
   transform: translateY(-6px);
-  box-shadow:
-    0 0 25px rgba(170,180,200,0.25),
-    inset 0 0 25px rgba(255,255,255,0.05);
+
 }
 
-.card h3 {
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #cfd3da;
-}
-
-
-/* IMAGES */
 .card img {
+
   width: 100%;
   height: 190px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 14px;
+
 }
 
 
-/* ============================= */
 /* RESPONSIVE */
-/* ============================= */
 @media (max-width: 600px) {
 
   .navbar {
@@ -362,22 +373,4 @@ section h2 {
     gap: 18px;
   }
 
-  .hero {
-    padding: 110px 15px 90px;
-  }
-
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-
-  .headline {
-    font-size: 1.05rem;
-  }
-
-  section {
-    padding: 35px 18px;
-    margin: 25px 15px;
-  }
-
 }
-
