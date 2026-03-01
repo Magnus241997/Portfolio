@@ -13,16 +13,16 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #dbece6;
-  color: #1a1a1a;
+  background-color: #f2f4f5; /* Misty Gray */
+  color: #2e2e2e; /* Charcoal */
   line-height: 1.6;
   min-height: 100vh;
   padding-top: 90px;
 }
 
 body.dark {
-  background: radial-gradient(circle at 30% 30%, #242830, #14171c 70%, #0b0d12 100%);
-  color: #ffffff;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
 }
 
 /* ============================= */
@@ -34,10 +34,10 @@ body.dark {
   left: 50%;
   transform: translateX(-50%);
   padding: 14px 38px;
-  background: linear-gradient(145deg, rgba(50,55,65,0.85), rgba(25,28,35,0.95));
+  background: #ffffff;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 0 20px rgba(140,150,170,0.18), inset 0 0 15px rgba(255,255,255,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
   backdrop-filter: blur(8px);
   z-index: 1000;
   transition: transform 0.35s ease, opacity 0.35s ease;
@@ -56,7 +56,7 @@ body.dark {
 
 .navbar a {
   text-decoration: none;
-  color: #ffffff;
+  color: #2e2e2e;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -64,7 +64,7 @@ body.dark {
 }
 
 .navbar a:hover {
-  color: #cfd3da;
+  color: #5c6bc0; /* Slate Blue */
 }
 
 /* ============================= */
@@ -73,7 +73,7 @@ body.dark {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url("IMAGES/hero-bg.jpg") center top / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url("IMAGES/hero-bg.jpg") center top / cover no-repeat;
   color: white;
   padding: 18vh 20px 16vh;
   text-align: center;
@@ -83,37 +83,6 @@ body.dark {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1.2s ease-out forwards;
-}
-
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
-  animation: float 6s ease-in-out infinite alternate;
-}
-
-.hero::before {
-  top: 20%;
-  left: 10%;
-}
-
-.hero::after {
-  bottom: 15%;
-  right: 12%;
-  animation-delay: 1.5s;
-}
-
-@keyframes float {
-  from {
-    transform: translateY(0) rotate(15deg);
-  }
-  to {
-    transform: translateY(-25px) rotate(30deg);
-  }
 }
 
 .hero h1 {
@@ -148,7 +117,7 @@ body.dark {
 
 .linkedin-icon svg:hover {
   transform: scale(1.15);
-  filter: drop-shadow(0 0 10px rgba(180,180,180,0.4));
+  filter: drop-shadow(0 0 10px rgba(93, 173, 236, 0.5)); /* Sky Blue glow */
 }
 
 /* ============================= */
@@ -162,17 +131,16 @@ body.dark {
 }
 
 /* ============================= */
-/* GLASS SECTIONS */
+/* SECTIONS */
 /* ============================= */
 section {
-  background-color: #d0d0d0;
+  background-color: #d0d4d9; /* Light Steel */
   max-width: 1000px;
   margin: 40px auto;
   padding: 50px 30px;
   border-radius: 18px;
   border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 0 20px rgba(0,0,0,0.05), inset 0 0 20px rgba(255,255,255,0.03);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1s ease-out forwards;
@@ -189,20 +157,19 @@ section h2 {
   text-align: center;
   margin-bottom: 35px;
   font-size: 1.9rem;
+  color: #2e2e2e;
 }
 
 /* ============================= */
-/* ABOUT SECTION (TWO-COLUMN) */
+/* ABOUT SECTION */
 /* ============================= */
 .about h2 {
   font-size: 2.2rem;
-  text-align: center;
   margin-bottom: 30px;
-  color: #1a1a1a;
 }
 
 .intro-white {
-  color: #000000;
+  color: #2e2e2e;
 }
 
 .about-content {
@@ -217,7 +184,6 @@ section h2 {
 .about-text {
   flex: 1 1 60%;
   font-size: 1.1rem;
-  color: #1a1a1a;
   text-align: justify;
 }
 
@@ -296,16 +262,17 @@ section h2 {
 /* CARDS */
 /* ============================= */
 .card {
-  background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,240,240,0.95));
+  background: #ffffff;
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 0 15px rgba(0,0,0,0.05), inset 0 0 15px rgba(255,255,255,0.03);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 4px 20px rgba(93, 173, 236, 0.3); /* Sky Blue glow */
 }
 
 .card img {
