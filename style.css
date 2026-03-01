@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at 20% 20%, #2a2f38, #1b1f27 60%, #12151b 100%);
-  color: #e4e6eb;
+  background-color: #f2f2f2;
+  color: #1a1a1a;
   line-height: 1.6;
   min-height: 100vh;
   padding-top: 90px;
@@ -165,14 +165,14 @@ body.dark {
 /* GLASS SECTIONS */
 /* ============================= */
 section {
-  background: linear-gradient(145deg, rgba(50,55,65,0.75), rgba(25,28,35,0.95));
+  background: linear-gradient(145deg, rgba(255,255,255,0.85), rgba(240,240,240,0.95));
   max-width: 1000px;
   margin: 40px auto;
   padding: 50px 30px;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 0 20px rgba(140,150,170,0.12), inset 0 0 20px rgba(255,255,255,0.03);
-  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05), inset 0 0 20px rgba(255,255,255,0.03);
+  backdrop-filter: blur(4px);
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1s ease-out forwards;
@@ -198,11 +198,11 @@ section h2 {
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 30px;
-  color: #e4e6eb;
+  color: #1a1a1a;
 }
 
 .intro-white {
-  color: #ffffff;
+  color: #000000;
 }
 
 .about-content {
@@ -217,7 +217,7 @@ section h2 {
 .about-text {
   flex: 1 1 60%;
   font-size: 1.1rem;
-  color: #e4e6eb;
+  color: #1a1a1a;
   text-align: justify;
 }
 
@@ -234,7 +234,7 @@ section h2 {
   width: 240px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 768px) {
@@ -259,7 +259,7 @@ section h2 {
 }
 
 .skills-list span {
-  background: rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.05);
   padding: 9px 16px;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -267,7 +267,7 @@ section h2 {
 }
 
 .skills-list span:hover {
-  background: rgba(200,200,200,0.18);
+  background: rgba(0,0,0,0.1);
 }
 
 /* ============================= */
@@ -296,11 +296,11 @@ section h2 {
 /* CARDS */
 /* ============================= */
 .card {
-  background: linear-gradient(145deg, rgba(55,60,70,0.85), rgba(30,34,42,0.95));
+  background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,240,240,0.95));
   padding: 25px;
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 0 15px rgba(150,160,180,0.12), inset 0 0 15px rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05), inset 0 0 15px rgba(255,255,255,0.03);
   transition: 0.3s;
 }
 
