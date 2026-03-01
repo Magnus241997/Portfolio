@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #2b2b2b;
+  background-color: #2b2b2b; /* Dark Gray */
   color: #e0e0e0;
   line-height: 1.6;
   min-height: 100vh;
@@ -119,31 +119,8 @@ body {
 /* ANIMATIONS */
 /* ============================= */
 @keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  60% {
+  to {
     opacity: 1;
-    transform: translateY(-6px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-    filter: blur(4px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-4px);
-    filter: blur(0);
-  }
-  100% {
     transform: translateY(0);
   }
 }
@@ -152,7 +129,7 @@ body {
 /* SECTIONS */
 /* ============================= */
 section {
-  background-color: #353535;
+  background-color: #353535; /* Soft Graphite */
   max-width: 1000px;
   margin: 40px auto;
   padding: 50px 30px;
@@ -163,6 +140,13 @@ section {
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1s ease-out forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 section h2 {
@@ -274,7 +258,7 @@ section h2 {
 /* CARDS */
 /* ============================= */
 .card {
-  background: #3f3f3f;
+  background: #3f3f3f; /* Dim Slate */
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.06);
