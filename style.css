@@ -327,5 +327,10 @@ section h2 {
 
 
 /* ============================= */
-/* RESPONSIVE NAVBAR */
+/* RUNNING ROBOT ANIMATION */
 /* ============================= */
+.robot-runner {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  margin-top: 40px;
