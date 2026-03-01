@@ -3,16 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Engr Kenneth James Correa Duapa | Mechanical Engineer Portfolio</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="IMAGES/ICON.jpg" />
 </head>
-
 <body>
 
   <!-- ===== FLOATING NAVBAR ===== -->
@@ -28,21 +22,9 @@
   <!-- ===== HERO ===== -->
   <header class="hero" id="hero">
     <h1>Kenneth James Correa Duapa</h1>
-    <p class="headline">
-      Mechanical Engineer | Automotive CAD & CAE Design Support
-    </p>
-
-    <!-- LinkedIn Icon -->
-    <a
-      href="https://www.linkedin.com/in/EngrKennethJamesCorreaDuapa"
-      target="_blank"
-      class="linkedin-icon"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="#0A66C2"
-      >
+    <p class="headline">Mechanical Engineer | Automotive CAD & CAE Design Support</p>
+    <a href="https://www.linkedin.com/in/EngrKennethJamesCorreaDuapa" target="_blank" class="linkedin-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0A66C2">
         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 
         2.761 2.239 5 5 5h14c2.762 0 5-2.239 
         5-5v-14c0-2.761-2.238-5-5-5zm-11 
@@ -70,13 +52,11 @@
             and technical support. My primary design tool is Catia, where I create accurate and manufacturable
             3D models and 2D drawings for resin and metal components.
           </p>
-
           <p>
             I also have experience in Beta Cae, working on geometry cleanup, midsurface extraction, meshing
             and quality checks to support basic CAE and simulation requirements. In addition, I use SolidWorks
             for simple 3D modeling and basic analysis to assist in design validation.
           </p>
-
           <p>
             I focus on clean design data, manufacturability, and practical solutions that help projects move
             efficiently from concept to production. Let’s work together to turn your ideas into reality.
@@ -88,7 +68,7 @@
         </div>
       </div>
 
-      <!-- ===== RUNNING ROBOT ANIMATION ===== -->
+      <!-- RUNNING ROBOT -->
       <div class="robot-runner">
         <img src="IMAGES/ROBOT.png" alt="Running Robot" />
       </div>
@@ -117,18 +97,12 @@
         <div class="card">
           <img src="IMAGES/project1.jpg" alt="Mechanical Part Design" />
           <h3>Gaming Mouse Concept Design</h3>
-          <p>
-            Styling study created in CATIA V5 including assembly structure,
-            visualization, and exploded views.
-          </p>
+          <p>Styling study created in CATIA V5 including assembly structure, visualization, and exploded views.</p>
         </div>
-
         <div class="card">
           <img src="IMAGES/project2.jpg" alt="Bracket Design" />
           <h3>Side Bracket Study</h3>
-          <p>
-            Personal CAD study project focused on modeling and drafting standards.
-          </p>
+          <p>Personal CAD study project focused on modeling and drafting standards.</p>
         </div>
       </div>
     </section>
@@ -141,12 +115,10 @@
           <h3>3D CAD Modeling</h3>
           <p>Production-ready part and assembly modeling.</p>
         </div>
-
         <div class="card">
           <h3>2D Drafting</h3>
           <p>Manufacturing drawings with proper tolerances.</p>
         </div>
-
         <div class="card">
           <h3>CAE Support</h3>
           <p>Geometry cleanup and meshing preparation.</p>
@@ -163,17 +135,14 @@
 
     window.addEventListener("scroll", () => {
       let currentScroll = window.pageYOffset;
-
       if (currentScroll > lastScroll && currentScroll > 80) {
         navbar.classList.add("hide");
       } else {
         navbar.classList.remove("hide");
       }
-
       lastScroll = currentScroll;
     });
   </script>
 
 </body>
 </html>
-
