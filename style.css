@@ -25,7 +25,6 @@ body.dark {
   color: #ffffff;
 }
 
-
 /* ============================= */
 /* FLOATING NAVBAR */
 /* ============================= */
@@ -67,7 +66,6 @@ body.dark {
 .navbar a:hover {
   color: #cfd3da;
 }
-
 
 /* ============================= */
 /* HERO */
@@ -153,7 +151,6 @@ body.dark {
   filter: drop-shadow(0 0 10px rgba(180,180,180,0.4));
 }
 
-
 /* ============================= */
 /* ANIMATIONS */
 /* ============================= */
@@ -163,7 +160,6 @@ body.dark {
     transform: translateY(0);
   }
 }
-
 
 /* ============================= */
 /* GLASS SECTIONS */
@@ -194,7 +190,6 @@ section h2 {
   margin-bottom: 35px;
   font-size: 1.9rem;
 }
-
 
 /* ============================= */
 /* ABOUT SECTION (TWO-COLUMN) */
@@ -253,7 +248,6 @@ section h2 {
   }
 }
 
-
 /* ============================= */
 /* SKILLS */
 /* ============================= */
@@ -276,7 +270,6 @@ section h2 {
   background: rgba(200,200,200,0.18);
 }
 
-
 /* ============================= */
 /* SERVICES */
 /* ============================= */
@@ -285,7 +278,6 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
-
 
 /* ============================= */
 /* PROJECTS */
@@ -299,7 +291,6 @@ section h2 {
 .projects .card {
   flex: 0 0 280px;
 }
-
 
 /* ============================= */
 /* CARDS */
@@ -323,14 +314,3 @@ section h2 {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 14px;
-}
-
-
-/* ============================= */
-/* RUNNING ROBOT ANIMATION */
-/* ============================= */
-.robot-runner {
-  position: relative;
-  overflow: hidden;
-  height: 100px;
-  margin-top: 40px;
