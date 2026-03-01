@@ -206,22 +206,28 @@ section h2 {
   color: #e4e6eb;
 }
 
-.highlight {
+.intro-white {
   color: #ffffff;
 }
 
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
+  min-height: 600px;
 }
 
 .about-text {
   flex: 1 1 60%;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #e4e6eb;
+  text-align: justify;
+}
+
+.about-text p {
+  margin-bottom: 18px;
 }
 
 .about-avatar {
@@ -230,7 +236,7 @@ section h2 {
 }
 
 .about-avatar img {
-  width: 220px;
+  width: 240px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -323,6 +329,4 @@ section h2 {
 /* ============================= */
 /* RESPONSIVE NAVBAR */
 /* ============================= */
-@media (max-width: 600px) {
-  .navbar {
-    padding: 12px 20
+@media (max
