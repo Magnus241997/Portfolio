@@ -207,7 +207,7 @@ section h2 {
 }
 
 .highlight {
-  color: #a78bfa;
+  color: #ffffff;
 }
 
 .about-content {
@@ -325,9 +325,4 @@ section h2 {
 /* ============================= */
 @media (max-width: 600px) {
   .navbar {
-    padding: 12px 20px;
-  }
-
-  .navbar ul {
-    gap: 18px;
-  }
+    padding: 12px 20
