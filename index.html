@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="ICON.jpg">
+  <link rel="icon" type="image/x-icon" href="images/ICON.jpg" />
 </head>
 
 <body>
@@ -24,7 +24,6 @@
       <li><a href="#services">Services</a></li>
     </ul>
   </nav>
-
 
   <!-- ===== HERO ===== -->
   <header class="hero" id="hero">
@@ -61,7 +60,6 @@
 
   </header>
 
-
   <main>
 
     <!-- ===== ABOUT ===== -->
@@ -70,24 +68,23 @@
       <h2>About Me</h2>
 
       <p>
-        I’m Kenneth, a Mechanical Engineer with 5 years of hands on experience in automotive design
+        I’m Kenneth, a Mechanical Engineer with 5 years of hands-on experience in automotive design
         and technical support. My primary design tool is Catia, where I create accurate and manufacturable
         3D models and 2D drawings for metal and plastic components.
       </p>
 
       <p>
-       I also have experince in Beta Cae, working on geometry cleanup, midsurface extraction, meshing
-        and quality checks to support basis CAE and simulation requirements. In addition, I use Solidworks
+        I also have experience in Beta Cae, working on geometry cleanup, midsurface extraction, meshing
+        and quality checks to support basic CAE and simulation requirements. In addition, I use SolidWorks
         for simple 3D modeling and basic analysis to assist in design validation.
       </p>
 
       <p>
-        I focus on clean design data, manufacturability, and practical solution that help projects move
+        I focus on clean design data, manufacturability, and practical solutions that help projects move
         efficiently from concept to production.
       </p>
 
     </section>
-
 
     <!-- ===== SKILLS ===== -->
     <section class="skills" id="skills">
@@ -95,7 +92,6 @@
       <h2>Skills</h2>
 
       <div class="skills-list">
-
         <span>CATIA</span>
         <span>BETA CAE (ANSA)</span>
         <span>SolidWorks</span>
@@ -105,11 +101,9 @@
         <span>Geometry Cleanup</span>
         <span>Meshing Support</span>
         <span>Automotive Design</span>
-
       </div>
 
     </section>
-
 
     <!-- ===== PROJECTS ===== -->
     <section class="projects-section" id="projects">
@@ -119,35 +113,25 @@
       <div class="projects">
 
         <div class="card">
-
-          <img src="project1.jpg" alt="Mechanical Part Design">
-
+          <img src="images/project1.jpg" alt="Mechanical Part Design" />
           <h3>Gaming Mouse Concept Design</h3>
-
           <p>
             Styling study created in CATIA V5 including assembly structure,
             visualization, and exploded views.
           </p>
-
         </div>
 
-
         <div class="card">
-
-          <img src="project2.jpg" alt="Bracket Design">
-
+          <img src="images/project2.jpg" alt="Bracket Design" />
           <h3>Side Bracket Study</h3>
-
           <p>
             Personal CAD study project focused on modeling and drafting standards.
           </p>
-
         </div>
 
       </div>
 
     </section>
-
 
     <!-- ===== SERVICES ===== -->
     <section class="services-section" id="services">
@@ -177,35 +161,23 @@
 
   </main>
 
-
   <!-- ===== AUTO HIDE NAVBAR SCRIPT ===== -->
   <script>
-
     let lastScroll = 0;
     const navbar = document.querySelector(".navbar");
 
     window.addEventListener("scroll", () => {
-
       let currentScroll = window.pageYOffset;
 
       if (currentScroll > lastScroll && currentScroll > 80) {
-
         navbar.classList.add("hide");
-
       } else {
-
         navbar.classList.remove("hide");
-
       }
 
       lastScroll = currentScroll;
-
     });
-
   </script>
-
 
 </body>
 </html>
-
-
