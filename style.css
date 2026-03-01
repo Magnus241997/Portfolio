@@ -317,9 +317,6 @@ section h2 {
 }
 
 /* ============================= */
-/* RUNNING ROBOT ANIMATION */
+/* SMALL RUNNING ROBOT ANIMATION */
 /* ============================= */
-.robot-runner {
-  position: relative;
-  overflow: hidden;
-  height: 100px;
+.robot
