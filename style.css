@@ -129,13 +129,13 @@ body {
 /* SECTIONS */
 /* ============================= */
 section {
-  background-color: #3a3a3a; /* Slightly lighter gray */
+  background-color: #353535; /* Soft Graphite */
   max-width: 1000px;
   margin: 40px auto;
   padding: 50px 30px;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
   backdrop-filter: blur(4px);
   opacity: 0;
   transform: translateY(40px);
@@ -258,7 +258,7 @@ section h2 {
 /* CARDS */
 /* ============================= */
 .card {
-  background: #444; /* Slate Gray */
+  background: #3f3f3f; /* Dim Slate */
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.06);
