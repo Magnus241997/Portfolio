@@ -314,3 +314,12 @@ section h2 {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 14px;
+}
+
+/* ============================= */
+/* RUNNING ROBOT ANIMATION */
+/* ============================= */
+.robot-runner {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
