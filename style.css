@@ -59,13 +59,13 @@ html, body {
 }
 
 /* ============================= */
-/* HERO */
+/* HERO (Reduced Height) */
 /* ============================= */
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
-  padding: 120px 20px 16vh;
+  min-height: 60vh;
+  padding: 80px 20px 10vh;
   background: linear-gradient(to bottom, #2c2f36 0%, #2c2f36 60%, #1e1f23 100%);
   display: flex;
   flex-direction: column;
