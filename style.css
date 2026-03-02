@@ -13,16 +13,11 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #e0e0e0; /* Light gray background */
   color: #1a1a1a;
   line-height: 1.6;
   min-height: 100vh;
   padding-top: 90px;
-}
-
-body.dark {
-  background: radial-gradient(circle at 30% 30%, #242830, #14171c 70%, #0b0d12 100%);
-  color: #ffffff;
 }
 
 /* ============================= */
@@ -85,37 +80,6 @@ body.dark {
   animation: fadeUp 1.2s ease-out forwards;
 }
 
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
-  animation: float 6s ease-in-out infinite alternate;
-}
-
-.hero::before {
-  top: 20%;
-  left: 10%;
-}
-
-.hero::after {
-  bottom: 15%;
-  right: 12%;
-  animation-delay: 1.5s;
-}
-
-@keyframes float {
-  from {
-    transform: translateY(0) rotate(15deg);
-  }
-  to {
-    transform: translateY(-25px) rotate(30deg);
-  }
-}
-
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 12px;
@@ -162,144 +126,17 @@ body.dark {
 }
 
 /* ============================= */
-/* CLEAN SECTIONS */
+/* ABOUT SECTION */
 /* ============================= */
-section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: reveal 1s ease-out forwards;
-  background: none;
-  border: none;
-  box-shadow: none;
-}
-
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 35px;
-  font-size: 1.9rem;
-}
-
-/* ============================= */
-/* ABOUT SECTION (SINGLE COLUMN) */
-/* ============================= */
-.about h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #1a1a1a;
-}
-
-.intro-white {
-  color: #000000;
-}
-
-.about-content.single-column {
-  justify-content: center;
-  text-align: center;
-  min-height: auto;
-}
-
-.about-text {
-  flex: 1 1 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #1a1a1a;
-  text-align: justify;
-}
-
-.about-text p {
-  margin-bottom: 18px;
-}
-
-.about-text .linkedin-icon {
-  display: inline-block;
-  margin-top: 20px;
-}
-
-/* ============================= */
-/* SKILLS */
-/* ============================= */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-
-.skills-list span {
-  background: rgba(0,0,0,0.05);
-  padding: 9px 16px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-
-.skills-list span:hover {
-  background: rgba(0,0,0,0.1);
-}
-
-/* ============================= */
-/* SERVICES */
-/* ============================= */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-/* ============================= */
-/* PROJECTS */
-/* ============================= */
-.projects {
-  display: flex;
-  gap: 25px;
-  overflow-x: auto;
-}
-
-.projects .card {
-  flex: 0 0 280px;
-}
-
-/* ============================= */
-/* CARDS */
-/* ============================= */
-.card {
-  background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,240,240,0.95));
-  padding: 25px;
-  border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 0 15px rgba(0,0,0,0.05), inset 0 0 15px rgba(255,255,255,0.03);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 14px;
-}
 .about-content.two-column {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .about-avatar {
@@ -322,6 +159,13 @@ section h2 {
   text-align: justify;
 }
 
+.about-text h2.intro-heading {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-align: left;
+  color: #1a1a1a;
+}
+
 .about-text p {
   margin-bottom: 18px;
 }
@@ -336,17 +180,115 @@ section h2 {
     text-align: center;
   }
 
+  .about-text h2.intro-heading {
+    text-align: center;
+  }
+
   .about-avatar img {
     max-width: 180px;
   }
 }
-.about-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  text-align: left;
-  color: #1a1a1a;
+
+/* ============================= */
+/* SKILLS */
+/* ============================= */
+.skills {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: left;
+}
 
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
 
+.skills-list span {
+  background: rgba(0,0,0,0.05);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
 
+.skills-list span:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+/* ============================= */
+/* PROJECTS */
+/* ============================= */
+.projects-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.projects {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+}
+
+.projects .card {
+  flex: 0 0 280px;
+}
+
+/* ============================= */
+/* SERVICES */
+/* ============================= */
+.services-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
