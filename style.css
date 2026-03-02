@@ -315,3 +315,37 @@ body {
   border-radius: 10px;
   margin-bottom: 14px;
 }
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+.site-footer {
+  background-color: #1a1a1a;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: #aaa;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert
