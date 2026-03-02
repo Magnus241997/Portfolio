@@ -68,7 +68,7 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(145deg, #2c2f36, #1a1c22);
+  background: linear-gradient(to bottom, #2c2f36 0%, #2c2f36 60%, #e0e0e0 100%);
   color: white;
   padding: 18vh 20px 16vh;
   text-align: center;
