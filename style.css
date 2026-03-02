@@ -239,6 +239,14 @@ html, body {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+
 /* ============================= */
 /* PROJECTS SECTION */
 /* ============================= */
@@ -321,15 +329,4 @@ html, body {
   text-align: center;
   font-size: 0.85rem;
   color: #aaa;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* ============================= */
-/* SCROLL TO TOP BUTTON */
-/* ============================= */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  background-color:
+  border-top: 1px solid rgba(255, 255,
