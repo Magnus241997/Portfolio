@@ -73,7 +73,7 @@ body.dark {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(145deg, #2c2f36, #1a1c22); /* Removed image */
+  background: linear-gradient(145deg, #2c2f36, #1a1c22);
   color: white;
   padding: 18vh 20px 16vh;
   text-align: center;
@@ -162,20 +162,18 @@ body.dark {
 }
 
 /* ============================= */
-/* GLASS SECTIONS */
+/* CLEAN SECTIONS */
 /* ============================= */
 section {
-  background: linear-gradient(145deg, rgba(255,255,255,0.85), rgba(240,240,240,0.95));
   max-width: 1000px;
   margin: 40px auto;
-  padding: 50px 30px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 0 20px rgba(0,0,0,0.05), inset 0 0 20px rgba(255,255,255,0.03);
-  backdrop-filter: blur(4px);
+  padding: 0 20px;
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1s ease-out forwards;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 @keyframes reveal {
