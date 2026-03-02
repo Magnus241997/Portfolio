@@ -140,11 +140,43 @@
 
   </main>
 
-  <!-- ===== AUTO HIDE NAVBAR SCRIPT ===== -->
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">© 2026 Kenneth James Correa Duapa</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/EngrKennethJamesCorreaDuapa" target="_blank" aria-label="LinkedIn">
+          <img src="IMAGES/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="mailto:your.email@example.com" aria-label="Email">
+          <img src="IMAGES/email.svg" alt="Email" />
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+          <img src="IMAGES/github.svg" alt="GitHub" />
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Blog</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TO TOP BUTTON ===== -->
+  <button id="scrollTopBtn" title="Back to top">↑</button>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    scrollBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
     let lastScroll = 0;
     const navbar = document.querySelector(".navbar");
-
     window.addEventListener("scroll", () => {
       let currentScroll = window.pageYOffset;
       if (currentScroll > lastScroll && currentScroll > 80) {
