@@ -8,15 +8,7 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-}
-
-html {
   scroll-behavior: smooth;
-}
-
-body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #1e1f23;
   color: #f0f0f0;
@@ -101,24 +93,6 @@ body {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards 0.6s;
-}
-
-.linkedin-icon {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease-out forwards 0.9s;
-}
-
-.linkedin-icon svg {
-  margin-top: 22px;
-  width: 46px;
-  height: 46px;
-  transition: 0.3s;
-}
-
-.linkedin-icon svg:hover {
-  transform: scale(1.15);
-  filter: drop-shadow(0 0 10px rgba(180,180,180,0.4));
 }
 
 /* ============================= */
@@ -317,35 +291,38 @@ body {
 }
 
 /* ============================= */
-/* FOOTER */
+/* FOOTER (Simplified) */
 /* ============================= */
 .site-footer {
   background-color: #1a1a1a;
-  padding: 30px 20px;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  color: #aaa;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
+/* ============================= */
+/* SCROLL TO TOP BUTTON */
+/* ============================= */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #2a2b30;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: none;
 }
 
-.footer-copy {
-  font-size: 0.9rem;
+#scrollTopBtn:hover {
+  background-color: #444;
+  transform: scale(1.1);
 }
-
-.footer-social a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.footer-social img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert
