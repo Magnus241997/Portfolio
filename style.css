@@ -18,8 +18,8 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #e0e0e0;
-  color: #1a1a1a;
+  background-color: #1e1f23;
+  color: #f0f0f0;
   line-height: 1.6;
   min-height: 100vh;
 }
@@ -74,7 +74,7 @@ body {
   overflow: hidden;
   min-height: 100vh;
   padding: 120px 20px 16vh;
-  background: linear-gradient(to bottom, #2c2f36 0%, #2c2f36 60%, #e0e0e0 100%);
+  background: linear-gradient(to bottom, #2c2f36 0%, #2c2f36 60%, #1e1f23 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -155,13 +155,13 @@ body {
   max-width: 240px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .about-text {
   flex: 1 1 60%;
   font-size: 1.1rem;
-  color: #1a1a1a;
+  color: #f0f0f0;
   text-align: justify;
 }
 
@@ -169,7 +169,7 @@ body {
   font-size: 2.2rem;
   margin-bottom: 25px;
   text-align: left;
-  color: #1a1a1a;
+  color: #ffffff;
 }
 
 .about-text p {
@@ -208,6 +208,7 @@ body {
   font-size: 2rem;
   margin-bottom: 25px;
   text-align: left;
+  color: #ffffff;
 }
 
 .skills-list.three-column {
@@ -219,7 +220,7 @@ body {
 .skill-group h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #2c2f36;
+  color: #ffffff;
 }
 
 .skill-group ul {
@@ -229,7 +230,7 @@ body {
 }
 
 .skill-group li {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -239,7 +240,7 @@ body {
 }
 
 .skill-group li:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ============================= */
@@ -255,6 +256,7 @@ body {
   font-size: 2rem;
   margin-bottom: 25px;
   text-align: left;
+  color: #ffffff;
 }
 
 .projects {
@@ -280,6 +282,7 @@ body {
   font-size: 2rem;
   margin-bottom: 25px;
   text-align: left;
+  color: #ffffff;
 }
 
 .services {
@@ -292,11 +295,12 @@ body {
 /* CARDS */
 /* ============================= */
 .card {
-  background: white;
+  background: #2a2b30;
+  color: #f0f0f0;
   padding: 25px;
   border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition: 0.3s;
 }
 
