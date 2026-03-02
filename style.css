@@ -64,7 +64,7 @@ html, body {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 60vh;
+  min-height: 40vh;
   padding: 80px 20px 10vh;
   background: linear-gradient(to bottom, #2c2f36 0%, #2c2f36 60%, #1e1f23 100%);
   display: flex;
@@ -326,3 +326,4 @@ html, body {
   background-color: #444;
   transform: scale(1.1);
 }
+
