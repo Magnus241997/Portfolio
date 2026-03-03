@@ -17,6 +17,21 @@ html, body {
 }
 
 /* ============================= */
+/* BLUEPRINT GRID BACKGROUND */
+/* ============================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,198,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,198,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ============================= */
 /* GLOBAL SECTION STYLE */
 /* ============================= */
 section {
@@ -33,14 +48,15 @@ section h2 {
   position: relative;
 }
 
+/* MODERN CLEAN UNDERLINE */
 section h2::after {
   content: "";
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  width: 80px;
+  height: 4px;
+  background: #00c6ff;
   display: block;
-  margin: 15px auto 0;
-  border-radius: 2px;
+  margin: 20px auto 0;
+  border-radius: 50px;
 }
 
 /* ============================= */
