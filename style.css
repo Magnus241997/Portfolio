@@ -17,6 +17,20 @@ html, body {
 }
 
 /* ============================= */
+/* SECTION DEFAULT */
+/* ============================= */
+section {
+  padding: 80px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+/* ============================= */
 /* FLOATING NAVBAR */
 /* ============================= */
 .navbar {
@@ -63,8 +77,8 @@ html, body {
 /* HERO SECTION */
 /* ============================= */
 .hero {
-  min-height: 60vh;
-  padding: 120px 20px 10vh;
+  min-height: 70vh;
+  padding: 160px 20px 100px;
   background: linear-gradient(to bottom, #2c2f36 0%, #2c2f36 60%, #1e1f23 100%);
   display: flex;
   flex-direction: column;
@@ -78,7 +92,7 @@ html, body {
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-weight: 700;
   opacity: 0;
   transform: translateY(20px);
@@ -123,13 +137,6 @@ html, body {
 }
 
 /* ============================= */
-/* SECTION SPACING */
-/* ============================= */
-section {
-  padding: 60px 20px 0;
-}
-
-/* ============================= */
 /* ABOUT SECTION */
 /* ============================= */
 .about-content.two-column {
@@ -137,7 +144,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 50px;
   max-width: 1000px;
   margin: auto;
 }
@@ -161,12 +168,11 @@ section {
 }
 
 .about-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .about-text p {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 /* ============================= */
@@ -180,11 +186,11 @@ section {
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 35px;
 }
 
 /* ============================= */
-/* PROJECTS SECTION (FIXED) */
+/* PROJECTS SECTION */
 /* ============================= */
 .projects-section {
   max-width: 1000px;
@@ -194,7 +200,7 @@ section {
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  gap: 35px;
 }
 
 .projects .card img {
@@ -219,7 +225,7 @@ section {
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 35px;
 }
 
 /* ============================= */
@@ -227,16 +233,16 @@ section {
 /* ============================= */
 .card {
   background: #2a2b30;
-  padding: 25px;
+  padding: 30px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.06);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  transition: 0.3s;
-  position: relative;
+  transition: 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* ============================= */
@@ -269,9 +275,10 @@ section {
 /* ============================= */
 .site-footer {
   background-color: #1a1a1a;
-  padding: 20px;
+  padding: 50px 20px;
+  margin-top: 80px;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #aaa;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
@@ -280,6 +287,7 @@ section {
 /* RESPONSIVE */
 /* ============================= */
 @media (max-width: 768px) {
+
   .about-content.two-column {
     flex-direction: column;
     text-align: center;
@@ -292,11 +300,16 @@ section {
   .about-avatar img {
     max-width: 180px;
   }
-}
-/* ============================= */
-/* EXTRA BOTTOM SPACING */
-/* ============================= */
 
-.services-section {
-  margin-bottom: 100px; /* dagdag space bago footer */
+  .navbar ul {
+    gap: 18px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .headline {
+    font-size: 1.1rem;
+  }
 }
