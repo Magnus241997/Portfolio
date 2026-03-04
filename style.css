@@ -361,3 +361,29 @@ section h2 {
     grid-template-columns: 1fr;
   }
 }
+/* ============================= */
+/* VISIBLE SERVICES BACKGROUND */
+/* ============================= */
+
+.services-section {
+  position: relative;
+  z-index: 5;
+  background: transparent !important;
+}
+
+.services-section::before {
+  content: none !important;
+}
+
+/* make animated layers stronger just for services */
+.services-section ~ .blueprint-grid,
+.services-section ~ #geometryCanvas,
+.services-section ~ .cad-rotate-bg {
+  opacity: 0.65 !important;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* slightly change grid size for services */
+.services-section ~ .blueprint-grid {
+  background-size: 40px 40px !important;
+}
