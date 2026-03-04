@@ -1,70 +1,76 @@
-// NAVBAR SCROLL EFFECT
+/* ========================================= */
+/* NAVBAR SCROLL EFFECT */
+/* ========================================= */
 
-window.addEventListener("scroll", function(){
+const navbar = document.querySelector(".navbar");
 
-const navbar =
-document.querySelector(".navbar");
-
-if(window.scrollY > 50){
-
-navbar.classList.add("scrolled");
-
-}
-else{
-
-navbar.classList.remove("scrolled");
-
-}
-
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
 });
 
 
+/* ========================================= */
+/* ACTIVE LINK CLICK */
+/* ========================================= */
 
-
-// ACTIVE LINK CLICK
-
-const links =
-document.querySelectorAll(".nav-link");
-
+const links = document.querySelectorAll(".nav-link");
 
 links.forEach(link => {
+  link.addEventListener("click", function () {
 
-link.addEventListener("click", function(){
+    links.forEach(l => l.classList.remove("active"));
+    this.classList.add("active");
 
-links.forEach(l =>
-l.classList.remove("active")
-);
-
-this.classList.add("active");
-
+  });
 });
 
 
-});
-
-/* ============================= */
-/* SUBTLE PARALLAX DEPTH */
-/* ============================= */
+/* ========================================= */
+/* SUBTLE PARALLAX DEPTH SYSTEM */
+/* ========================================= */
 
 const blueprint = document.querySelector(".blueprint-grid");
 const cadBg = document.querySelector(".cad-rotate-bg");
+const canvas = document.querySelector("#geometryCanvas");
 
-/* Mouse Parallax */
+let mouseX = 0;
+let mouseY = 0;
+let scrollY = 0;
+
+/* Mouse Movement */
 document.addEventListener("mousemove", (e) => {
-
-  const x = (e.clientX / window.innerWidth - 0.5);
-  const y = (e.clientY / window.innerHeight - 0.5);
-
-  blueprint.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
-  canvas.style.transform = `translate(${x * 20}px, ${y * 20}px)`;
-  cadBg.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+  mouseX = (e.clientX / window.innerWidth - 0.5);
+  mouseY = (e.clientY / window.innerHeight - 0.5);
 });
 
-/* Scroll Depth Effect */
+/* Scroll Movement */
 window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-
-  blueprint.style.transform += ` translateY(${scrollY * 0.05}px)`;
-  canvas.style.transform += ` translateY(${scrollY * 0.08}px)`;
-  cadBg.style.transform += ` translateY(${scrollY * 0.12}px)`;
+  scrollY = window.scrollY;
 });
+
+/* Smooth Animation Loop */
+function parallaxLoop() {
+
+  if (blueprint) {
+    blueprint.style.transform =
+      `translate(${mouseX * 6}px, ${mouseY * 6 + scrollY * 0.02}px)`;
+  }
+
+  if (canvas) {
+    canvas.style.transform =
+      `translate(${mouseX * 10}px, ${mouseY * 10 + scrollY * 0.04}px)`;
+  }
+
+  if (cadBg) {
+    cadBg.style.transform =
+      `translate(${mouseX * 14}px, ${mouseY * 14 + scrollY * 0.06}px)`;
+  }
+
+  requestAnimationFrame(parallaxLoop);
+}
+
+parallaxLoop();
