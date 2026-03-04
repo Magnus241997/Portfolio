@@ -209,6 +209,27 @@
       glow.style.top = e.clientY + "px";
     });
   </script>
+  
+<script>
+  /* Scroll Reveal Animation */
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
 
+    reveals.forEach((element) => {
+      const windowHeight = window.innerHeight;
+      const revealTop = element.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (revealTop < windowHeight - revealPoint) {
+        element.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
+</script>
+  
 </body>
 </html>
+
