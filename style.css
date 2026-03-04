@@ -153,7 +153,6 @@ section {
 }
 
 /* Blur panels for all sections EXCEPT projects */
-
 section:not(.projects-section)::before {
   content: "";
   position: absolute;
@@ -223,6 +222,27 @@ section h2 {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
+}
+
+/* ========================================= */
+/* PROJECTS SECTION - 2 COLUMN SMALL CARDS */
+/* ========================================= */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.projects .card {
+  padding: 20px;
+}
+
+.projects .card img {
+  height: 180px;
+  object-fit: cover;
 }
 
 /* ========================================= */
@@ -325,6 +345,10 @@ section h2 {
 
   .cad-rotate-bg {
     opacity: 0.15;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 
 }
