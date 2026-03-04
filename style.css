@@ -152,7 +152,9 @@ section {
   z-index: 10;
 }
 
-section::before {
+/* Blur panels for all sections EXCEPT projects */
+
+section:not(.projects-section)::before {
   content: "";
   position: absolute;
   inset: 0;
