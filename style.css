@@ -221,3 +221,25 @@ footer {
     transform: translateZ(0);
   }
 }
+/* ========================================= */
+/* SAFE BACKGROUND VISIBILITY BOOST */
+/* ========================================= */
+
+.blueprint-grid {
+  opacity: 0.6 !important;
+  background-image:
+    linear-gradient(rgba(0,255,200,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,200,0.2) 1px, transparent 1px) !important;
+}
+
+.cad-rotate-bg {
+  opacity: 0.4 !important;
+  background: radial-gradient(circle, rgba(0,255,200,0.15), transparent 70%) !important;
+  animation-duration: 45s !important;
+}
+
+#geometryCanvas {
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 8px rgba(0,255,200,0.5));
+}
+
