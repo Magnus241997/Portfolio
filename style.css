@@ -279,3 +279,28 @@ section h2 {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+/* ============================= */
+/* BLUEPRINT GRID OVERLAY */
+/* ============================= */
+
+.blueprint-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,240,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,240,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -5;
+  pointer-events: none;
+}
+
+/* ============================= */
+/* FLOATING GEOMETRY CANVAS */
+/* ============================= */
+
+#geometryCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+}
