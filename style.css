@@ -28,12 +28,12 @@ body {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,240,255,0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,240,255,0.12) 1px, transparent 1px);
+    linear-gradient(rgba(0,240,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,240,255,0.15) 1px, transparent 1px);
   background-size: 60px 60px;
-  z-index: -2; /* moved higher */
+  z-index: -2;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: transform 0.2s ease-out;
 }
 
@@ -44,11 +44,11 @@ body {
 #geometryCanvas {
   position: fixed;
   inset: 0;
-  z-index: -1; /* moved higher */
+  z-index: -1;
   pointer-events: none;
-  transition: transform 0.2s ease-out;
   opacity: 1;
-  filter: drop-shadow(0 0 6px rgba(0,240,255,0.5));
+  filter: drop-shadow(0 0 8px rgba(0,240,255,0.4));
+  transition: transform 0.2s ease-out;
 }
 
 /* ========================================= */
@@ -62,7 +62,7 @@ body {
   z-index: -3;
   pointer-events: none;
   animation: rotateBg 50s linear infinite;
-  opacity: 0.4;
+  opacity: 0.45;
   transition: transform 0.2s ease-out;
 }
 
@@ -124,12 +124,11 @@ body {
   z-index: 10;
 }
 
-/* Reduced overlay darkness */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(5,10,20,0.35); /* reduced from 0.55 */
+  background: rgba(5,10,20,0.35);
   backdrop-filter: blur(4px);
   border-radius: 12px;
   z-index: -1;
@@ -155,12 +154,11 @@ section {
   z-index: 10;
 }
 
-/* Reduced blur darkness for other sections */
 section:not(.projects-section)::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(5,10,20,0.35); /* reduced */
+  background: rgba(5,10,20,0.35);
   backdrop-filter: blur(4px);
   border-radius: 12px;
   z-index: -1;
@@ -171,6 +169,25 @@ section h2 {
   margin-bottom: 40px;
   font-size: 2rem;
   color: #00f0ff;
+}
+
+/* ========================================= */
+/* SERVICES SECTION (STRONGER BACKGROUND) */
+/* ========================================= */
+
+.services-section {
+  /* Make background visible */
+  background: transparent;
+  z-index: 5;
+}
+
+.services-section::before {
+  display: none; /* remove opaque overlay */
+}
+
+/* Optional gradient behind services text for contrast */
+.services-section {
+  background: radial-gradient(circle at center, rgba(0,240,255,0.08), transparent 70%);
 }
 
 /* ========================================= */
@@ -321,7 +338,7 @@ section h2 {
 }
 
 /* ========================================= */
-/* MOBILE */
+/* MOBILE (KEEP SAME LOOK) */
 /* ========================================= */
 
 @media (max-width: 992px) {
@@ -334,17 +351,13 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-
   .blueprint-grid {
     opacity: 0.3;
   }
-
   .cad-rotate-bg {
     opacity: 0.25;
   }
-
   .projects {
     grid-template-columns: 1fr;
   }
-
 }
