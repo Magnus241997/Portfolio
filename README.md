@@ -1,2 +1,2 @@
 # My personal Website
-This is a practice template for website portfolio.
+This is a practice template for portfolio.
